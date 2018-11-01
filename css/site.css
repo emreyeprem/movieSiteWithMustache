@@ -1,0 +1,11 @@
+.card-img-top{
+  height: 150px !important;
+  width: 200px !important;
+}
+.movieDetailContainer{
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-around !important;
+  margin: 30px !important;
+
+}

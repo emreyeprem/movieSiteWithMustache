@@ -1,0 +1,31 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="site.css" />
+</head>
+
+<body>
+
+  <h1>Add Movies</h1>
+
+<form action="/add_movies" method="POST">
+
+  <label>Movie Title</label>
+  <input type="text" name = "movieTitle" placeholder="Type your movie title to add"/><br />
+  <label>Category</label><br />
+     <label><input type="radio" name="genre" value="Comedy">Comedy</label>
+     <label><input type="radio" name="genre" value="Sci-Fiction">Sci-Fiction</label>
+     <label><input type="radio" name="genre" value="Animation">Animation</label>
+     <label><input type="radio" name="genre" value="Drama">Drama</label>
+     <label><input type="radio" name="genre" value="Adventure">Adventure</label><br />
+
+  <label>Description</label>
+  <input type="text" name="movieDescription" /><br />
+  <label>Enter a posterURL</label>
+  <input type="text" name="movieURL" placeholder="Enter a posterURL"/><br />
+  <input type="submit"/>
+
+</form>
+
+</body>
+</html>

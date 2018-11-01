@@ -1,0 +1,40 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="site.css" />
+</head>
+
+<body>
+
+  <a href="/add-task">DG Cinemas</a>
+
+<div id="container">
+
+
+<label><strong>Categories</strong></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <a href="/movies/Comedy">Comedy</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="/movies/Sci-Fiction">Sci-Fiction</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <a href="/movies/Animation">Animation</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/movies/Drama">Drama</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <a href="/movies/Adventure">Adventure</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="movieDetailContainer">
+{{#movieList}}
+   <form action="/delete_movie" method="POST">
+    <h3 class="card-text">{{Title}}</h3>
+    <h4 class="card-text">{{Category}}</h4>
+    <div id='imgDiv' class="card" style="width: 14rem;">
+      <img id="pictures" class="card-img-top" src="{{Poster}}" alt="Card image cap"/>
+      <div class="card-body">
+        <p class="card-text">{{Description}}</p>
+      </div>
+
+      <input type="hidden" name="movieName" value="{{Title}}"/>
+      <input type="submit" value="Remove"/>
+    </div>
+  </form>
+  {{/movieList}}
+</div>
+</div>
+<a href="/add_movies"><button>Add movie</button></a>
+</body>
+
+</html>
